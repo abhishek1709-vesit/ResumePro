@@ -118,6 +118,7 @@ def chat():
     
     return render_template("chat.html")
 
+@app.before_first_request
 def create_tables():
     db.create_all()
 
