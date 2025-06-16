@@ -1,0 +1,110 @@
+.section-container {
+    width: 75vw;
+    margin: auto;
+    margin-top: 30px;
+}
+.heading{
+    text-align: center;
+    margin-top: 15px;
+}
+.form-field{
+    width: 55vw;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 4px dashed #0c7ff2;
+    margin: auto;
+    margin-top: 30px;
+    border-radius: 15px;
+    gap: 10px;
+    text-align: center;
+}
+.drag-area{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.drag-text{
+    font-weight: 600;
+}
+
+.btn{
+    width: 110px;
+    height: 30px;
+    color: white;
+    font-weight: 600;
+    background-color: #0c7ff2;
+    border: none;
+    border-radius: 10px;    
+}
+
+.btn:hover{
+    color: black;
+}
+
+.btn:active{
+    font-size: 12px;
+}
+
+.ai-feedback{
+    width: 55vw;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 4px dashed #0c7ff2;
+    margin: auto;
+    margin-top: 30px;
+    border-radius: 15px;
+    gap: 10px;
+}
+
+.feedback-section {
+    padding: 15px;
+    max-width: 100%;
+    overflow: auto;
+    padding: 10px;
+}
+
+.chat{
+    background-color: #0c7ff2;
+    margin: auto;  
+    margin-top: 30px; 
+    width: 50vw;
+    height: 5vh;
+    font-size: 20px;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    color: white;
+    text-decoration: none;
+}
+
+.highlight{
+    background-color: #4f93d7;
+}
+
+@media (max-width:700px) {
+    .heading{
+        text-align: center;
+        font-size: 1.5rem;
+    }
+
+    .drag-area{
+        text-align: center;
+        padding: 5px;
+    }
+
+    .ai-feedback, .form-field{
+        width: 75vw;
+        padding: 5px;
+        font-size: 13px;
+    }
+}

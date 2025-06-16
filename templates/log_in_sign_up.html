@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Pro - LogIn/SignUp </title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='loginSignup.css') }}">
+</head>
+<body>
+    <div class="home-container">
+        <div class="text">
+            <div class="heading">ResumePro an AI Resume Analyzer</div>
+            <div class="para">Get instant feedback on your resume to identify areas of improvement and increase your chances of landing your dream job</div>
+        </div>
+        <div class="home-section">
+            <div class="buttons">
+                <a href="/login">Already Have a account? Log In</a>
+                <a href="/signup">New User? Sign Up</a>
+            </div>
+            <div class="image">
+                <img src="{{ url_for('static', filename='images/hlaptop.png') }}" alt="">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

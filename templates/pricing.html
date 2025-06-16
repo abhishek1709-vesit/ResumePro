@@ -1,0 +1,51 @@
+{% extends 'index.html' %}
+
+{% block title %}
+   Pricing
+{% endblock %}
+{% block link_css %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='pricing.css') }}">
+{% endblock %}
+{% block content %}
+<div class="container-pricing">
+
+    <h1>Choose the plan that is right for you</h1>
+    <div class="price_cards">
+        <div class="cards">
+            <div class="value">Free</div>
+            <div class="price"><span>₹0</span>/month</div>
+            <div class="choose_btn">Get Started</div>
+            <div class="points">
+                <p>✔ 1 resume analysis per hour</p>
+                <p>✔ Basic Feedback</p>
+                <p>✔ Email support</p>
+            </div>
+        </div>
+    
+        <div class="cards">
+            <div class="value">Pro</div>
+            <div class="price"><span>₹10</span>/month</div>
+            <div class="choose_btn">Get Started</div>
+            <div class="points">
+                <p>✔ Unlimited resume analysis</p>
+                <p>✔ Advance Feedback</p>
+                <p>✔ Priority support</p>
+                <p>✔ ATS optimization</p>
+            </div>
+        </div>
+    
+        <div class="cards">
+            <div class="value">Expert</div>
+            <div class="price"><span>₹20</span>/month</div>
+            <div class="choose_btn">Get Started</div>
+            <div class="points">
+                <p>✔ Unlimited resume analysis</p>
+                <p>✔ Advance Feedback</p>
+                <p>✔ 24/7 support</p>
+                <p>✔ ATS optimization</p>
+                <p>✔ Personalized coaching</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

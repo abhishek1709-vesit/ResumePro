@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> {% block title %}
+      Log In | ResumePro
+    {% endblock %} </title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='login.css') }}">
+  </head>
+  <body>
+    <div class="container">
+      <h1> {% block heading %}
+        Welcome Back !
+      {% endblock %} </h1>
+      <form method="POST" class="form_area">
+        {% block errorBlock %}
+         {% if error %}
+        <p><strong>{% block errorMsg %} {{error}} {% endblock %}</strong></p>
+        {% endif %} 
+        {% endblock %}
+        <div class="username common">
+          <label for="fname">{% block username %} Username {% endblock %} </label><br />
+          <input type="text" id="fname" name="username" placeholder="Enter your username" /><br />
+        </div>
+        
+        <div class="password common">
+          <label for="lname">{% block password %} Password {% endblock %} </label><br />
+          <input type="text" id="lname" name="password" placeholder="Enter password"/><br />
+        </div>
+  
+        <button type="submit" class="btn"> {% block button %}
+          Log In
+        {% endblock %} </button>
+      </form>
+    </div>
+  </body>
+</html>

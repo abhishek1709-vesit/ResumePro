@@ -1,0 +1,32 @@
+{% extends 'index.html' %}
+
+{% block title %}
+    About Us
+{% endblock %}
+{% block link_css %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='information.css') }}">
+{% endblock %}
+{% block content %}
+    <h1>Information :-</h1>
+    <div class="container">
+        <div class="owner para">
+            <h3>Owner (made by):-</h3>
+            <p>This project is completely made by <span><a href="https://www.linkedin.com/in/abhishek-gore-ab3217310?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">Abhishek Gore</span></a></p>
+        </div>
+        <div class="why-this-project para">
+            <h3>Why this project?</h3>
+          I completed learning html,css and js along with python and flask. Then i wanted to make something which includes all things i learnt till now along with a little bit of AI integration using API keys
+        </div>
+        <div class="what-it-do para">
+            <h3>How it works?</h3>
+            <p>1. The content from the entered pdf is extracted using python library <a href="https://pypdf2.readthedocs.io/en/3.x/" target="_blank">PyPdf2.</a></p>
+            <p>2. The extracted content is then passed to the AI which is deepseek. Got an free deepseek api key from <a href="https://openrouter.ai/" target="_blank">OpenRouter</a> also used their documentations for using the api key</p>
+            <p>3. Deepseek then reads the extracted/raw content and generates analysis based on that extracted content</p>
+            <p>4. This analysis by deepseek is then shown to the user</p>
+            <p>5. For the "Chat with AI" feature the same extracted text from the pdf is send to AI along with the user questions which are took as input in the "/chat" route</p>
+        </div>
+        <div class="contactMe para">
+
+        </div>
+    </div>
+{% endblock %}

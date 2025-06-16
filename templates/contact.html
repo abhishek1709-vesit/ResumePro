@@ -1,0 +1,20 @@
+{% extends 'index.html' %}
+{% block link_css %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='contact.css') }}">
+{% endblock %}
+{% block content %}
+    <div class="contact">
+        <div class="email social">
+            <a href="mailto:2024.abhishek.gore@ves.ac.in"><i class="fa-solid fa-envelope"></i>Email Us</a>
+        </div>
+        <div class="instagram social">
+            <a href="https://www.instagram.com/abhishek_gore9097.77/" target="_blank"><i class="fa-brands fa-instagram"></i>Message Us on Instagram</a>
+        </div>
+        <div class="linkedin social">
+            <a href="https://www.linkedin.com/in/abhishek-gore-ab3217310?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fa-brands fa-linkedin"></i>Connect with us on LinkedIn</a>
+        </div>
+        <div class="whatsapp social">
+            <a href="https://api.whatsapp.com/send/?phone=%2B919869123931&text&type=phone_number&app_absent=0" target="_blank"><i class="fa-brands fa-whatsapp"></i>Message Us on whatsapp</a>
+        </div>
+    </div>
+{% endblock %}

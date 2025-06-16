@@ -1,0 +1,43 @@
+{% extends 'index.html' %}
+
+{% block title %}
+    Analyze Your Resume
+{% endblock %}
+
+{% block link_css %}
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'analyze.css' ) }}">    
+{% endblock %}
+{% block content %}
+<div class="section-container">
+
+    <h2 class="heading">Resume Analysis</h2>
+    {% if error %}
+        <div class="error-message">{{ error }}</div>
+    {% endif %}
+    <form method="POST" enctype="multipart/form-data" class="form-field drag-area">
+        <div class="drag-area" id="drag-area">
+            <div class="drag-text">Drag and drop or click/tap here to upload your resume here</div>
+            <div class="drag-info">We support PDF formats. Max size: 5MB</div>
+            <input type="file" name="input_file" id="fileElem" hidden>
+            <span id="loading-text" style="display:none;">Processing...</span>
+        </div>
+        <button type="submit" class="btn" id="submit-btn">Upload</button>
+    </form>
+    
+    <h2 class="heading ai">AI-Feedback</h2>
+    <div class="ai-feedback">
+        <div class="feedback-section">
+            {% if feedback %}
+                {{feedback | safe}}
+            {% endif %}
+        </div>
+    </div>
+    <a href="/chat" class="chat">Chat with AI </a>
+</div>
+
+{% endblock %}
+    
+{% block script %}
+    <script src="{{ url_for('static', filename = 'fileDrag.js' ) }}"></script>
+    <script src="{{ url_for('static', filename='index.js') }}"></script>
+{% endblock %}

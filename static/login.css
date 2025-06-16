@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Inder&display=swap");
+
+* {
+  font-family: "Inder", sans-serif;
+  font-weight: 400;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: auto;
+}
+
+h1, .sign_heading{
+  font-size: 50px;
+}
+
+.form_area {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  font-size: 20px;
+}
+
+.username {
+  font-size: 20px;
+}
+
+.common input {
+  width: 20vw;
+  height: 30px;
+  border-radius: 12px;
+  padding: 5px;
+}
+
+.btn {
+  background-color: #0c7ff2;
+  color: white;
+  font-weight: 700;
+  height: 40px;
+  border: none;
+  border-radius: 12px;
+  margin-top: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  font-size: 15px;
+}
+
+.container h1 {
+  overflow: hidden;
+  border-right: 5px solid black;
+  white-space: nowrap;
+  letter-spacing: 0.1em;
+  animation: typing 1.5s steps(14), blink-caret 0.7s step-end infinite;
+}
+
+.sign_heading{
+    animation: typing steps(20), blink-caret 0.7s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 30vw;
+  }
+}
+
+@keyframes blink-caret {
+  0%,
+  100% {
+    border-color: transparent;
+  }
+  50% {
+    border-color: black;
+  }
+}
+
+@media (max-width: 800px) {
+  .common input {
+    width: 80vw;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+
+  .sign_heading {
+    font-size: 30px;
+  }
+}

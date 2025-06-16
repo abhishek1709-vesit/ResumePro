@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> {% block title %} ResumePro {% endblock %} </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    {% block link_css %}
+        
+    {% endblock %}
+</head>
+<body>
+    <!-- navbar section  -->
+    <section class="containers">
+        <nav class="navbar">
+            <div class="logo"><a href="/home">ResumePro</a></div>
+                <ul class="navbar-elements" id="menuList">
+                    <li><a href="/information">Information</a></li>
+                    <li><a href="/pricing">Pricing</a></li>
+                    <li><a href="/contact">Contact Us</a></li>
+                    <li><button class="analyze-button-one"><a href="/analyze">Analyze My Resume</a></button></li>
+                </ul>
+                <div class="menu-icon">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+                <div class="cross-icon" style="display: none;">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+        </nav>
+    </section>
+    {% block content %}
+        <!-- hero section  -->
+        <section class="container">
+            <div class="hero-gradient">
+                <div class="hero-text">
+                    Unlock Your Career Potential with 
+                    <div class="seecond-hero-text">AI-Powered Resume Analysis</div>
+                    <div class="third-hero-text">
+                        Get instant feedback on your resume to identify areas of improvement and incease your chances of landing your dream job
+                    </div>
+                    <div class="hero-analyze-button">
+                        <button class="analyze-button-one"><a href="/analyze">Analyze My Resume</a></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- key features -->
+        <section>
+            <div class="key-features">
+                <h2 class="key-text">Key Feature :-</h2>
+                <div class="content">Our AI-Powered resume analyzer provides comprehensive feedback to help you create a standout resume</div>
+            </div>
+            <div class="feature-cards">
+                <div class="card">
+                    <div class="icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+                    <h4 class="card-text">In-Depth Analysis</h4>
+                    <div class="card-content">Receive detailed feedback on your resume's content, formatting, and keywords to ensure it aligns with industry best practices.</div>
+                </div>
+                <div class="card">
+                    <div class="icon"><i class="fa-solid fa-arrow-up-right-dots"></i></div>
+                    <h4 class="card-text">Performance Tracking</h4>
+                    <div class="card-content">Track your resume's performance over time and see how your changes impact your chances of getting noticed by recruiters.</div>
+                </div>
+                <div class="card">
+                    <div class="icon"><i class="fa-solid fa-clock"></i></div>
+                    <h4 class="card-text">Time-Saving Insights</h4>
+                    <div class="card-content">Get instant feedback and actionable insights, saving you time and effort in crafting a compelling resume.</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- stories section  -->
+        <section>
+            <div class="success-stories">
+                <div class="stories">
+                    <h2 class="success-text key-text">Success Stories</h2>
+                    <div class="tell">Following are the individuals who used our ResumeAI</div>
+                </div>
+
+                <div class="success_cards">
+                    <div class="success-individual-card">
+                        <img src="{{ url_for('static', filename='images/user_img_1.avif') }}" alt="user-image">
+                        <div class="success-card-text">
+                            <h3 class="name">Sarah M.</h3>
+                            <div class="user-feedback">"ResumePro helped me identify key areas for improvement in my resume, resulting in a significant increase in interview invitations."</div>
+                        </div>
+                    </div>
+
+                    <div class="success-individual-card">
+                        <img src="{{ url_for('static', filename='images/user_img_two.webp') }}" alt="user-image">
+                        <div class="success-card-text">
+                            <h3 class="name">David L.</h3>
+                            <div class="user-feedback">"I was struggling to get noticed by recruiters until I used ResumePro. The detailed feedback helped me tailor my resume to specific job descriptions."</div>
+                        </div>
+                    </div>
+
+                    <div class="success-individual-card">
+                        <img src="{{ url_for('static', filename='images/user_img_three.jpg') }}" alt="user-image">
+                        <div class="success-card-text">
+                            <h3 class="name">Emily R.</h3>
+                            <div class="user-feedback">"Thanks to ResumePro, I was able to create a resume that truly highlights my skills and experience, leading to a successful career transition."</div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    {% endblock %}
+
+    <!-- footer section  -->
+    <footer>
+        <div class="footer">
+            <div class="social-media-icons">
+                <a href="https://www.linkedin.com/in/abhishek-gore-ab3217310?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/abhishek_gore9097.77/", target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+            <div class="rights">
+                <i class="fa-solid fa-copyright"></i> 2025 ResumePro. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    {% block script %}
+        <script src="{{ url_for('static', filename='index.js') }}"></script>
+    {% endblock %}
+</body>
+</html>

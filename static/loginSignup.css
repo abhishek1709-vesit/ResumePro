@@ -1,0 +1,141 @@
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  overflow-y: hidden;
+  margin: 0;
+}
+
+.home-container{
+  display: flex;
+  flex-direction: column;
+  width: 75vw;
+  /* max-width: 80vw; */
+  height: 80vh;
+  max-height: 90vh;
+  background-color: #0c7ff2;
+  border-radius: 15px;
+  font-family:sans-serif;
+  /* flex-wrap: wrap; */
+}
+
+.text{
+  width: 55vw;
+  color: white;
+  margin: auto;
+  margin-top: 5em;
+}
+
+.heading{
+  font-size: 46px;
+  font-weight: bolder;
+}
+
+.para{
+  width: 45vw;
+  font-size: 18px;
+  font-weight: 200;
+  margin-top: 15px;
+  /* border: 2px solid black; */
+  line-height: 25px;
+}
+
+.buttons{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;  
+  text-align: center;
+}
+
+.buttons a{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+  background-color: white;
+  width: 20vw;
+  height: 8vh;
+  border-radius: 15px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.home-section{
+  width: 75vw;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.image{
+  height: 60vh;
+  width: 30vw;
+}
+
+.image img{
+  height: 100%;
+  width: 100%;
+}
+
+@media (max-width:790px) {
+  body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow-y: auto;
+  }
+
+  .home-container{
+    margin-top: 10px;
+    width: 90vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+  }
+  
+  .home-section{
+    flex-direction: column;
+    justify-content: center;
+    margin: 40px auto;
+
+  }
+
+  .text{
+    padding: 20px;
+    margin-top: 20px;
+    width: 60vw;
+  }
+
+  .heading{
+    font-size: 30px;
+  }
+
+  .para{
+    font-size: 22px;
+    width: 55vw;
+  }
+
+  .buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .buttons a{
+    text-align: center;
+    padding: 10px 20px;
+    width: 60vw;
+    height: 8vh;
+  }
+
+  .image img{
+   display: none;
+  }
+}
