@@ -63,6 +63,11 @@ h1, .sign_heading{
     animation: typing steps(20), blink-caret 0.7s step-end infinite;
 }
 
+p{
+  color: red;
+  font-weight: 500;
+}
+
 @keyframes typing {
   from {
     width: 0%;
