@@ -15,6 +15,11 @@ body::-webkit-scrollbar {
   display: none; 
 }
 
+#nprogress .bar {
+    background: #0c7ff2 !important;
+    height: 4px !important;
+}
+
 .container {
   overflow-x: hidden;
 }

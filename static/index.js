@@ -1,3 +1,9 @@
+NProgress.start();
+
+window.addEventListener("load", () => {
+    NProgress.done();
+});
+
 document.addEventListener("DOMContentLoaded", () => {
     const menuList = document.getElementById("menuList") 
     const menuIcon = document.querySelector(".menu-icon");
