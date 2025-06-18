@@ -8,13 +8,12 @@ document.addEventListener("DOMContentLoaded", () => {
   const submitBtn = document.getElementById("submit-btn");
   const loadingText = document.getElementById("loading-text");
 
-  // Always check if elements exist
   if (dropArea && fileInput) {
     ["dragenter", "dragover"].forEach((eventName) => {
       dropArea.addEventListener(eventName, (e) => {
         e.preventDefault();
-        e.stopPropagation(); // Prevent default browser handling
-        dropArea.classList.add("highlight"); // Optional: visual cue
+        e.stopPropagation(); // to prevent default browser handling
+        dropArea.classList.add("highlight");
       });
     });
 
@@ -30,10 +29,9 @@ document.addEventListener("DOMContentLoaded", () => {
       const files = e.dataTransfer.files;
       if (files.length > 0) {
         if (files[0].type === "application/pdf") {
-          console.log(files);
-          fileInput.files = files; // Attach file to input field
+          // console.log(files);
+          fileInput.files = files; 
           dragText.textContent = `Selected: ${files[0].name}`;
-          // form.submit()
         } else {
           dragText.textContent = "Please upload a PDF file";
         }
