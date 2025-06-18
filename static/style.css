@@ -6,6 +6,15 @@
     box-sizing: border-box;
 }
 
+body {
+  overflow-y: scroll;
+  scrollbar-width: none; 
+}
+
+body::-webkit-scrollbar {
+  display: none; 
+}
+
 .container {
   overflow-x: hidden;
 }
