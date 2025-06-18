@@ -27,6 +27,9 @@ def login():
     if request.method == "POST":
         username = request.form.get('username')
         password = request.form.get('password')
+        if( not username.strip() or not password.strip()):
+            return render_template("login.html", error="The username or password cannot be empty")
+        
         username_exists = Users.query.filter_by(username = username).first()
 
         if username_exists and username_exists.password == password:
@@ -46,6 +49,9 @@ def signup():
         username = request.form.get("username")
         password = request.form.get("password")
 
+        if( not username.strip() or not password.strip()):
+            return render_template("login.html", error="The username or password cannot be empty")
+        
         username_exists = Users.query.filter_by(username = username).first()
 
         if username_exists:
