@@ -119,7 +119,6 @@ def chat():
         
         answer = ai_chat(content, question)
         answer_formatted = FormatFeedback(answer)
-        # Pass both the question and answer to the template
         return render_template("chat.html", answer=answer_formatted, question=question)
     
     return render_template("chat.html")

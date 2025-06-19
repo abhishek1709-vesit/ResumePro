@@ -12,8 +12,6 @@ def feedbackFromAi(content):
         headers={
             "Authorization": f"Bearer {api_key}",
             "Content-Type": "application/json",
-            # "HTTP-Referer": "https://your-site.com",  # Optional
-            # "X-Title": "My Chat App",  # Optional
         },
         data=json.dumps({
             "model": "deepseek/deepseek-r1-0528:free",
@@ -39,7 +37,6 @@ def feedbackFromAi(content):
         })
     )
 
-    # Print the response
     if response.status_code == 200:
         data = response.json()
         # print(data)
