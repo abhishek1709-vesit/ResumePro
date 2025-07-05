@@ -68,7 +68,7 @@ def signup():
 
 @app.route("/home")
 def home():
-    return render_template("index.html")
+    return render_template("index.html", page="home")
 
 @app.route("/analyze", methods = ["GET", "POST"])
 def analyze():
