@@ -108,7 +108,7 @@ if (currentPage === "home") {
         trigger: ".stories",
         scroller: "body",
         start: "top 35%",
-        markers: true,
+        // markers: true,
         stagger: 0.2,
       },
     });
