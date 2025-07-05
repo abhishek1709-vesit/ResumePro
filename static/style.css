@@ -107,7 +107,6 @@ body::-webkit-scrollbar {
     margin-top: 25px;
     width: 100vw;
     min-height: 60vh;
-  background: #ede021;
   background: linear-gradient(
     181deg,
     rgba(237, 224, 33, 1) 0%,

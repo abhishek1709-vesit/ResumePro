@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.css" />
+    
 
     {% block link_css %}
         
@@ -18,10 +19,10 @@
         <nav class="navbar">
             <div class="logo"><a href="/home">ResumePro</a></div>
                 <ul class="navbar-elements" id="menuList">
-                    <li><a href="/information">Information</a></li>
-                    <li><a href="/pricing">Pricing</a></li>
-                    <li><a href="/contact">Contact Us</a></li>
-                    <li><button class="analyze-button-one"><a href="/analyze">Analyze My Resume</a></button></li>
+                    <li><a id="links" href="/information">Information</a></li>
+                    <li><a id="links" href="/pricing">Pricing</a></li>
+                    <li><a id="links" href="/contact">Contact Us</a></li>
+                    <li><button class="analyze-button-one"><a id="links" href="/analyze">Analyze My Resume</a></button></li>
                 </ul>
                 <div class="menu-icon">
                     <i class="fa-solid fa-bars"></i>
@@ -49,7 +50,7 @@
         </section>
 
         <!-- key features -->
-        <section>
+        <section class="features-section">
             <div class="key-features">
                 <h2 class="key-text">Key Feature :-</h2>
                 <div class="content">Our AI-Powered resume analyzer provides comprehensive feedback to help you create a standout resume</div>
@@ -124,6 +125,8 @@
         </div>
     </footer>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js" integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js" integrity="sha512-P2IDYZfqSwjcSjX0BKeNhwRUH8zRPGlgcWl5n6gBLzdi4Y5/0O4zaXrtO4K9TZK6Hn1BenYpKowuCavNandERg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     {% block script %}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.js"></script>
     <script src="{{ url_for('static', filename='index.js') }}"></script>
